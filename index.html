@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Website Directory</title>
+  <meta name="description" content="Directory website dan resource online.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0b0b0b;
+      color: #fff;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    header {
+      padding: 55px 0 35px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0 0 10px;
+      font-size: 36px;
+    }
+
+    header p {
+      color: #aaa;
+      margin: 0;
+    }
+
+    .controls {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+
+    input,
+    select {
+      width: 100%;
+      padding: 14px 16px;
+      border: 1px solid #333;
+      border-radius: 10px;
+      background: #151515;
+      color: #fff;
+      outline: none;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .card {
+      padding: 20px;
+      border: 1px solid #292929;
+      border-radius: 14px;
+      background: #121212;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 18px;
+      word-break: break-word;
+    }
+
+    .category {
+      display: inline-block;
+      margin-bottom: 15px;
+      padding: 5px 9px;
+      border-radius: 6px;
+      background: #222;
+      color: #aaa;
+      font-size: 12px;
+    }
+
+    .card a {
+      display: block;
+      padding: 11px;
+      border-radius: 8px;
+      text-align: center;
+      text-decoration: none;
+      background: #fff;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin: 30px 0 50px;
+      flex-wrap: wrap;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: 1px solid #333;
+      border-radius: 8px;
+      background: #151515;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    button.active {
+      background: #fff;
+      color: #000;
+    }
+
+    .status {
+      text-align: center;
+      color: #888;
+      padding: 30px 0;
+    }
+
+    @media (max-width: 800px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 550px) {
+      header h1 {
+        font-size: 28px;
+      }
+
+      .controls {
+        flex-direction: column;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header>
+      <h1>Website Directory</h1>
+      <p>Daftar website dan resource pilihan</p>
+    </header>
+
+    <div class="controls">
+      <input
+        type="search"
+        id="search"
+        placeholder="Cari nama atau domain..."
+      >
+
+      <select id="category">
+        <option value="">Semua kategori</option>
+      </select>
+    </div>
+
+    <div id="status" class="status">
+      Memuat data...
+    </div>
+
+    <div id="domain-list" class="grid"></div>
+
+    <div id="pagination" class="pagination"></div>
+
+  </div>
+
+<script>
+
+const DATA_URL =
+  "https://raw.githubusercontent.com/rajavigorteam/backlink-group/main/data.json";
+
+const PER_PAGE = 20;
+
+let domains = [];
+let filtered = [];
+let currentPage = 1;
+
+const list = document.getElementById("domain-list");
+const pagination = document.getElementById("pagination");
+const search = document.getElementById("search");
+const category = document.getElementById("category");
+const status = document.getElementById("status");
+
+async function loadData() {
+
+  try {
+
+    const response = await fetch(DATA_URL + "?v=" + Date.now());
+
+    if (!response.ok) {
+      throw new Error("Gagal mengambil data");
+    }
+
+    domains = await response.json();
+
+    if (!Array.isArray(domains)) {
+      throw new Error("Format data.json tidak valid");
+    }
+
+    createCategories();
+
+    filtered = domains;
+
+    render();
+
+  } catch (error) {
+
+    console.error(error);
+
+    status.textContent =
+      "Data belum tersedia atau data.json belum dibuat.";
+
+  }
+
+}
+
+function createCategories() {
+
+  const categories = [
+    ...new Set(
+      domains
+        .map(item => item.category)
+        .filter(Boolean)
+    )
+  ].sort();
+
+  category.innerHTML =
+    '<option value="">Semua kategori</option>';
+
+  categories.forEach(cat => {
+
+    const option = document.createElement("option");
+
+    option.value = cat;
+    option.textContent = cat;
+
+    category.appendChild(option);
+
+  });
+
+}
+
+function filterData() {
+
+  const keyword =
+    search.value.toLowerCase().trim();
+
+  const selected =
+    category.value;
+
+  filtered = domains.filter(item => {
+
+    const name =
+      String(item.name || "").toLowerCase();
+
+    const url =
+      String(item.url || "").toLowerCase();
+
+    const cat =
+      String(item.category || "");
+
+    const matchesSearch =
+      !keyword ||
+      name.includes(keyword) ||
+      url.includes(keyword);
+
+    const matchesCategory =
+      !selected ||
+      cat === selected;
+
+    return matchesSearch && matchesCategory;
+
+  });
+
+  currentPage = 1;
+
+  render();
+
+}
+
+function render() {
+
+  list.innerHTML = "";
+
+  const totalPages =
+    Math.ceil(filtered.length / PER_PAGE);
+
+  if (filtered.length === 0) {
+
+    status.textContent =
+      "Tidak ada website yang ditemukan.";
+
+    pagination.innerHTML = "";
+
+    return;
+
+  }
+
+  status.textContent =
+    `${filtered.length} website ditemukan`;
+
+  const start =
+    (currentPage - 1) * PER_PAGE;
+
+  const pageItems =
+    filtered.slice(start, start + PER_PAGE);
+
+  pageItems.forEach(item => {
+
+    const card =
+      document.createElement("div");
+
+    card.className = "card";
+
+    const title =
+      document.createElement("h3");
+
+    title.textContent =
+      item.name || item.url;
+
+    const tag =
+      document.createElement("span");
+
+    tag.className = "category";
+
+    tag.textContent =
+      item.category || "Website";
+
+    const link =
+      document.createElement("a");
+
+    link.href = item.url;
+    link.target = "_blank";
+    link.rel = "noopener noreferrer";
+    link.textContent = "Kunjungi Website";
+
+    card.appendChild(title);
+    card.appendChild(tag);
+    card.appendChild(link);
+
+    list.appendChild(card);
+
+  });
+
+  renderPagination(totalPages);
+
+}
+
+function renderPagination(totalPages) {
+
+  pagination.innerHTML = "";
+
+  if (totalPages <= 1) return;
+
+  for (let i = 1; i <= totalPages; i++) {
+
+    const button =
+      document.createElement("button");
+
+    button.textContent = i;
+
+    if (i === currentPage) {
+      button.classList.add("active");
+    }
+
+    button.onclick = () => {
+
+      currentPage = i;
+
+      render();
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    };
+
+    pagination.appendChild(button);
+
+  }
+
+}
+
+search.addEventListener("input", filterData);
+
+category.addEventListener("change", filterData);
+
+loadData();
+
+</script>
+
+</body>
+</html>
