@@ -1,17 +1,19 @@
 [
   {
     "name": "Website 1",
-    "url": "https://domain1.com",
+    "url": "https://blogsocial.click",
     "category": "Website"
   },
   {
     "name": "Website 2",
-    "url": "https://domain2.com",
+    "url": "https://blogsocial.click/sobre.html",
     "category": "Blog"
   },
   {
     "name": "Website 3",
-    "url": "https://domain3.com",
+    "url": "https://blogsocial.click/politica-de-cookies.html",
     "category": "News"
   }
 ]
+
+
