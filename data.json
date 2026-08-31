@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Website 1",
+    "url": "https://domain1.com",
+    "category": "Website"
+  },
+  {
+    "name": "Website 2",
+    "url": "https://domain2.com",
+    "category": "Blog"
+  },
+  {
+    "name": "Website 3",
+    "url": "https://domain3.com",
+    "category": "News"
+  }
+]
