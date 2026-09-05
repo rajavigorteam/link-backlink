@@ -1,12 +1,362 @@
 [
-    {
-    "name": "Website 1",
-    "url": "https://blogsocial.click",
+  {
+    "name": "blogsocial.click",
+    "url": "https://blogsocial.click/",
     "category": "Website"
   },
-    {
-    "name": "Website 1",
-    "url": "https://blogsocial.click",
+  {
+    "name": "blogsocial.click",
+    "url": "https://blogsocial.click/sobre.html",
+    "category": "Website"
+  },
+  {
+    "name": "blogsocial.click",
+    "url": "https://blogsocial.click/politica-de-cookies.html",
+    "category": "Website"
+  },
+  {
+    "name": "bergheimhesse.com",
+    "url": "https://www.bergheimhesse.com/",
+    "category": "Website"
+  },
+  {
+    "name": "infiltruth.com",
+    "url": "https://www.infiltruth.com/",
+    "category": "Website"
+  },
+  {
+    "name": "linxgear.com",
+    "url": "https://www.linxgear.com/",
+    "category": "Website"
+  },
+  {
+    "name": "aqstix.com",
+    "url": "https://www.aqstix.com/",
+    "category": "Website"
+  },
+  {
+    "name": "codedrill.net",
+    "url": "https://codedrill.net/",
+    "category": "Website"
+  },
+  {
+    "name": "customsaastestapp.us",
+    "url": "https://customsaastestapp.us/",
+    "category": "Website"
+  },
+  {
+    "name": "deangrenier.com",
+    "url": "https://deangrenier.com/",
+    "category": "Website"
+  },
+  {
+    "name": "achiket.site",
+    "url": "https://www.achiket.site/",
+    "category": "Website"
+  },
+  {
+    "name": "blastfi.io",
+    "url": "https://www.blastfi.io/",
+    "category": "Website"
+  },
+  {
+    "name": "avabhasini.com",
+    "url": "https://www.avabhasini.com/",
+    "category": "Website"
+  },
+  {
+    "name": "richiesonhub.com",
+    "url": "https://richiesonhub.com/",
+    "category": "Website"
+  },
+  {
+    "name": "louxingyun2026.xyz",
+    "url": "https://www.louxingyun2026.xyz/",
+    "category": "Website"
+  },
+  {
+    "name": "queretrocanarias.es",
+    "url": "https://www.queretrocanarias.es/",
+    "category": "Website"
+  },
+  {
+    "name": "queretrocanarias.com",
+    "url": "https://www.queretrocanarias.com/",
+    "category": "Website"
+  },
+  {
+    "name": "queretro.com",
+    "url": "https://queretro.com/",
+    "category": "Website"
+  },
+  {
+    "name": "nels.co.kr",
+    "url": "https://www.nels.co.kr/",
+    "category": "Website"
+  },
+  {
+    "name": "atetherapeutics.com",
+    "url": "https://www.atetherapeutics.com/",
+    "category": "Website"
+  },
+  {
+    "name": "backoftheenvelope.ai",
+    "url": "https://www.backoftheenvelope.ai/",
+    "category": "Website"
+  },
+  {
+    "name": "caivannhandang.com",
+    "url": "https://caivannhandang.com/",
+    "category": "Website"
+  },
+  {
+    "name": "jccampos.com.br",
+    "url": "https://jccampos.com.br/",
+    "category": "Website"
+  },
+  {
+    "name": "cmlp.com",
+    "url": "https://www.cmlp.com/",
+    "category": "Website"
+  },
+  {
+    "name": "cloutesuite.com",
+    "url": "https://www.cloutesuite.com/",
+    "category": "Website"
+  },
+  {
+    "name": "dontgetbroke.com",
+    "url": "https://www.dontgetbroke.com/",
+    "category": "Website"
+  },
+  {
+    "name": "amanteschocolate.com",
+    "url": "https://amanteschocolate.com/",
+    "category": "Website"
+  },
+  {
+    "name": "black-mint.com",
+    "url": "https://www.black-mint.com/",
+    "category": "Website"
+  },
+  {
+    "name": "benayoun.vip",
+    "url": "https://www.benayoun.vip/",
+    "category": "Website"
+  },
+  {
+    "name": "flomad.international",
+    "url": "https://www.flomad.international/",
+    "category": "Website"
+  },
+  {
+    "name": "floors.vip",
+    "url": "https://www.floors.vip/",
+    "category": "Website"
+  },
+  {
+    "name": "coachfertilite.net",
+    "url": "https://www.coachfertilite.net/",
+    "category": "Website"
+  },
+  {
+    "name": "himikosadiki.com",
+    "url": "https://himikosadiki.com/",
+    "category": "Website"
+  },
+  {
+    "name": "hubblebubble.london",
+    "url": "https://hubblebubble.london/",
+    "category": "Website"
+  },
+  {
+    "name": "evidenceprimeglobal.com",
+    "url": "https://evidenceprimeglobal.com/",
+    "category": "Website"
+  },
+  {
+    "name": "emigria.com",
+    "url": "https://www.emigria.com/",
+    "category": "Website"
+  },
+  {
+    "name": "curated-lens.com",
+    "url": "https://www.curated-lens.com/",
+    "category": "Website"
+  },
+  {
+    "name": "ccgsprojetos.com",
+    "url": "https://ccgsprojetos.com/",
+    "category": "Website"
+  },
+  {
+    "name": "akbartandoori.co.uk",
+    "url": "https://www.akbartandoori.co.uk/",
+    "category": "Website"
+  },
+  {
+    "name": "happyindoorcat.com",
+    "url": "https://happyindoorcat.com/",
+    "category": "Website"
+  },
+  {
+    "name": "logiviande.com",
+    "url": "https://www.logiviande.com/",
+    "category": "Website"
+  },
+  {
+    "name": "groundworkcfo.io",
+    "url": "https://groundworkcfo.io/",
+    "category": "Website"
+  },
+  {
+    "name": "miraie-stay.com",
+    "url": "https://miraie-stay.com/",
+    "category": "Website"
+  },
+  {
+    "name": "tasharestaurant.com",
+    "url": "https://tasharestaurant.com/",
+    "category": "Website"
+  },
+  {
+    "name": "minnietreasures.com",
+    "url": "https://www.minnietreasures.com/",
+    "category": "Website"
+  },
+  {
+    "name": "iloveyou.social",
+    "url": "https://www.iloveyou.social/",
+    "category": "Website"
+  },
+  {
+    "name": "doneplan.online",
+    "url": "https://www.doneplan.online/",
+    "category": "Website"
+  },
+  {
+    "name": "culturescelebration.org",
+    "url": "https://www.culturescelebration.org/",
+    "category": "Website"
+  },
+  {
+    "name": "culturescelebration.net",
+    "url": "https://www.culturescelebration.net/",
+    "category": "Website"
+  },
+  {
+    "name": "baird.blog",
+    "url": "https://www.baird.blog/",
+    "category": "Website"
+  },
+  {
+    "name": "bakezy.net",
+    "url": "https://www.bakezy.net/",
+    "category": "Website"
+  },
+  {
+    "name": "bereanengine.online",
+    "url": "https://www.bereanengine.online/",
+    "category": "Website"
+  },
+  {
+    "name": "senbaku.net",
+    "url": "https://www.senbaku.net/",
+    "category": "Website"
+  },
+  {
+    "name": "backpacking-the-world.com",
+    "url": "https://www.backpacking-the-world.com/",
+    "category": "Website"
+  },
+  {
+    "name": "atitlanlife.com",
+    "url": "https://www.atitlanlife.com/",
+    "category": "Website"
+  },
+  {
+    "name": "aceroschubut.com.ar",
+    "url": "https://www.aceroschubut.com.ar/",
+    "category": "Website"
+  },
+  {
+    "name": "acheter-un-immeuble.com",
+    "url": "https://www.acheter-un-immeuble.com/",
+    "category": "Website"
+  },
+  {
+    "name": "alexasolnado.com",
+    "url": "https://www.alexasolnado.com/",
+    "category": "Website"
+  },
+  {
+    "name": "alovate.tech",
+    "url": "https://alovate.tech/",
+    "category": "Website"
+  },
+  {
+    "name": "aviathrive.com",
+    "url": "https://www.aviathrive.com/",
+    "category": "Website"
+  },
+  {
+    "name": "babylonheavydutytowing.com",
+    "url": "https://babylonheavydutytowing.com/",
+    "category": "Website"
+  },
+  {
+    "name": "axion-chat.com",
+    "url": "https://axion-chat.com/",
+    "category": "Website"
+  },
+  {
+    "name": "athulyageriatric.com",
+    "url": "https://athulyageriatric.com/",
+    "category": "Website"
+  },
+  {
+    "name": "archwayslabs.com",
+    "url": "https://www.archwayslabs.com/",
+    "category": "Website"
+  },
+  {
+    "name": "cerullocpa.com",
+    "url": "https://www.cerullocpa.com/",
+    "category": "Website"
+  },
+  {
+    "name": "bmgtoprangemotor.com",
+    "url": "https://www.bmgtoprangemotor.com/",
+    "category": "Website"
+  },
+  {
+    "name": "costfy.com.br",
+    "url": "https://costfy.com.br/",
+    "category": "Website"
+  },
+  {
+    "name": "contrydoorinsurance.com",
+    "url": "https://www.contrydoorinsurance.com/",
+    "category": "Website"
+  },
+  {
+    "name": "connorswesbites.com",
+    "url": "https://www.connorswesbites.com/",
+    "category": "Website"
+  },
+  {
+    "name": "concretewestlakevillage.com",
+    "url": "https://www.concretewestlakevillage.com/",
+    "category": "Website"
+  },
+  {
+    "name": "concretetorrance.com",
+    "url": "https://www.concretetorrance.com/",
+    "category": "Website"
+  },
+  {
+    "name": "concretesanleandro.com",
+    "url": "https://concretesanleandro.com/",
     "category": "Website"
   }
 ]
